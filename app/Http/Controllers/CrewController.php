@@ -58,7 +58,9 @@ class CrewController extends Controller
      */
     public function edit($id)
     {
-        
+        $crew = Crew::find($id);
+
+        return view('crews.edit', compact('crew'));
     }
 
     /**
@@ -70,7 +72,7 @@ class CrewController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Crew::find($id)->update($request->except('_token'));
     }
 
     /**
@@ -81,6 +83,6 @@ class CrewController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Crew::find($id)->delete();
     }
 }

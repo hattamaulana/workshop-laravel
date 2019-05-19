@@ -17,6 +17,8 @@
                     <th class="border-0">Email</th> 
                     <th class="border-0">Jabatan</th>
                     <th class="border-0">Nomor Handpone</th>
+                    <th></th>
+                    <th></th>
                   </tr>
                 </thead>
 
@@ -28,6 +30,20 @@
                         <td> {{ $crew->email }} </td>
                         <td> {{ $crew->position }} </td>
                         <td> {{ $crew->phonenumber }} </td>
+                        <td> 
+                          <a href=" {{ route('crew.edit', ['id' => $crew->id]) }} ">
+                            <button type="submit" class="btn btn-warning">
+                              <i class="fa fa-edit"></i>
+                            </button>
+                          </a>
+                        </td>
+                        <td>
+                          <a href=" {{ route('crew.delete', ['id' => $crew->id]) }} ">
+                            <button type="submit" class="btn btn-danger">
+                              <i class="fa fa-remove"></i>
+                            </button>
+                          </a>
+                        </td>
                       </tr>
                   @empty
                       <tr>

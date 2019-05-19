@@ -5,30 +5,30 @@
   <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
       <div class="box">
-        <h3 class="box-header">Tambah Data</h3>
+        <h3 class="box-header">Edit Data Crew</h3>
         <div class="box-body">
-          <form action=" {{ route('crew.store') }} " method="post"> 
+          <form action=" {{ route('crew.update', ['id' => $crew->id]) }} " method="post"> 
             @csrf()
             
             <div class="form-group form-control-">
               <label for="exampleInputEmail1">Nama</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" name="name">
+              <input type="text" class="form-control" id="exampleInputEmail1" value="{{ $crew->name }}" name="name">
             </div>
 
             <div class="form-group">
               <label for="exampleInputEmail1">Jabatan</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" name="position">
+              <input type="text" class="form-control" id="exampleInputEmail1" value="{{ $crew->position }}" name="position">
             </div>
 
             <div class="form-group">
               <label for="exampleInputEmail1">Nomor Telepon</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" name="phonenumber">
+              <input type="text" class="form-control" id="exampleInputEmail1" value="{{ $crew->phonenumber }}" name="phonenumber">
               <small id="emailHelp" class="form-text text-muted">Nomor Telepon yang dapat dihubungi</small>
             </div>
 
             <div class="form-group">
               <label for="exampleInputEmail1">Email</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" name="email">
+              <input type="text" class="form-control" id="exampleInputEmail1" value="{{ $crew->email }}" name="email">
               <small id="emailHelp" class="form-text text-muted">Email yang digunakan saat ini</small>
             </div>
 

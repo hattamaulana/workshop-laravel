@@ -21,5 +21,8 @@ Route::get('dashboard', function() {
 
 Route::get('/crew', 'CrewController@index')->name('crew');
 Route::get('/crew/create', 'CrewController@create')->name('crew.create');
+Route::get('/crew/edit/{id}', 'CrewController@edit')->name('crew.edit');
+Route::post('/crew/update/{id}', 'CrewController@update')->name('crew.update');
+Route::get('/crew/delete/{id}', 'CrewController@destroy')->name('crew.delete');
 Route::post('/crew/store', 'CrewController@store')->name('crew.store');
 // Route::post('/crew/store', 'CrewController@store')->name('crew.store');
