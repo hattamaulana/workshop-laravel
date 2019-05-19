@@ -14,7 +14,8 @@ class CrewController extends Controller
      */
     public function index()
     {
-        //
+        $crews = Crew::all();
+        return view('crews.index', compact('crews'));
     }
 
     /**
@@ -57,7 +58,7 @@ class CrewController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**

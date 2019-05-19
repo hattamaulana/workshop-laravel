@@ -19,5 +19,7 @@ Route::get('dashboard', function() {
   return view('dashboard.index');
 });
 
+Route::get('/crew', 'CrewController@index')->name('crew');
 Route::get('/crew/create', 'CrewController@create')->name('crew.create');
 Route::post('/crew/store', 'CrewController@store')->name('crew.store');
+// Route::post('/crew/store', 'CrewController@store')->name('crew.store');
