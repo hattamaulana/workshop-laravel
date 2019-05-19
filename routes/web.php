@@ -12,5 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.app');
 });
+
+Route::get('dashboard', function() {
+  return view('dashboard.index');
+});
+
+Route::get('/crew/create', 'CrewController@create')->name('crew.create');
+Route::post('/crew/store', 'CrewController@store')->name('crew.store');
