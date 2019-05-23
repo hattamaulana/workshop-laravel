@@ -1,7 +1,10 @@
 @extends('layout.app')
+@section('dashboard-name')
+  Crew
+    <small>Tambah Crew Baru</small>
+@endsection
 
 @section('content')
-<div class="container" style="margin-top: 50px;">
   <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
       <div class="box">
@@ -16,6 +19,12 @@
             </div>
 
             <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" name="email">
+              <small id="emailHelp" class="form-text text-muted">Email yang digunakan saat ini</small>
+            </div>
+
+            <div class="form-group">
               <label for="exampleInputEmail1">Jabatan</label>
               <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" name="position">
             </div>
@@ -24,12 +33,6 @@
               <label for="exampleInputEmail1">Nomor Telepon</label>
               <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" name="phonenumber">
               <small id="emailHelp" class="form-text text-muted">Nomor Telepon yang dapat dihubungi</small>
-            </div>
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Nama" name="email">
-              <small id="emailHelp" class="form-text text-muted">Email yang digunakan saat ini</small>
             </div>
 
             <div class="box-footer clearfix">
@@ -48,5 +51,11 @@
       </div>
     </div>
   </div>
-</div>
+@endsection
+
+@section('breadcumb')
+  <li>
+    <a href="/crew"><i class="fa fa-user"></i> Crew</a>
+  </li>
+    <li class="active">Tambah Crew</li>
 @endsection

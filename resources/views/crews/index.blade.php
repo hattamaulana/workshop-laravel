@@ -1,11 +1,28 @@
 @extends('layout.app')
 
 @section('content')
-<div class="container" style="margin-top: 50px;">
-  <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-      <div class="box">
-        <h3 class="box-header">Data Crew</h3>
+<div class="row">
+  <div class="col-md-12">
+    <div class="box">
+      <h4 class="box-header" style="text-align: center">
+          Data Crew Comunity
+      </h4>
+
+      <div class="row center">
+          <div class="col-md-6" style="margin: 0px auto;">
+            <form>
+              <div class="input-group input-group-lg">
+                <input type="text" name="search" id="" class="form-control">
+              
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-info btn-flat">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
 
         <div class="box-body p-0">
             <div class="table-responsive">
@@ -17,8 +34,6 @@
                     <th class="border-0">Email</th> 
                     <th class="border-0">Jabatan</th>
                     <th class="border-0">Nomor Handpone</th>
-                    <th></th>
-                    <th></th>
                   </tr>
                 </thead>
 
@@ -36,8 +51,6 @@
                               <i class="fa fa-edit"></i>
                             </button>
                           </a>
-                        </td>
-                        <td>
                           <a href=" {{ route('crew.delete', ['id' => $crew->id]) }} ">
                             <button type="submit" class="btn btn-danger">
                               <i class="fa fa-remove"></i>
@@ -56,7 +69,6 @@
               </table>
             </div>
           </div>
-      </div>
     </div>
   </div>
 </div>

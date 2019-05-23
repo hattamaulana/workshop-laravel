@@ -12,9 +12,14 @@ class CrewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $req)
     {
-        $crews = Crew::all();
+      // dd($req->all());
+        $crews = Crew::when(!empty($req->search), function($query) use ($req) {
+          $query->where('name', 'LIKE', '%'. $req->search .'%');
+          $query->orWhere('position', '='. $req->search);
+        })->get();
+
         return view('crews.index', compact('crews'));
     }
 
@@ -37,6 +42,8 @@ class CrewController extends Controller
     public function store(Request $request)
     {
         Crew::create($request->except('_token'));
+
+        return redirect()->route('crew');
     }
 
     /**
@@ -73,6 +80,8 @@ class CrewController extends Controller
     public function update(Request $request, $id)
     {
         Crew::find($id)->update($request->except('_token'));
+        
+        return redirect()->route('crew');
     }
 
     /**
@@ -84,5 +93,7 @@ class CrewController extends Controller
     public function destroy($id)
     {
         Crew::find($id)->delete();
+
+        return redirect()->route('crew');
     }
 }
