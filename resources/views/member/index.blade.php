@@ -1,7 +1,7 @@
 @extends('layout.app')
   @section('dashboard-name')
-    Crew
-      <small>List Crew</small>
+    Member
+      <small>List Member</small>
   @endsection
 
   @section('content')
@@ -9,7 +9,7 @@
     <div class="col-md-12">
       <div class="box">
         <h1 class="box-header" style="text-align: center">
-            <b>DATA CREW</b>
+            <b>DATA MEMBER</b>
         </h1>
 
         <div class="row">
@@ -36,26 +36,24 @@
                       <th class="border-0">No.</th>
                       <th class="border-0">Nama</th>
                       <th class="border-0">Email</th> 
-                      <th class="border-0">Jabatan</th>
                       <th class="border-0">Nomor Handpone</th>
                     </tr>
                   </thead>
 
                   <tbody>
-                    @forelse ($crews as $crew)
+                    @forelse ($members as $Member)
                         <tr>
-                          <td> {{ $crew->id }} </td>
-                          <td> {{ $crew->name }} </td>
-                          <td> {{ $crew->email }} </td>
-                          <td> {{ $crew->position }} </td>
-                          <td> {{ $crew->phonenumber }} </td>
+                          <td> {{ $Member->id }} </td>
+                          <td> {{ $Member->name }} </td>
+                          <td> {{ $Member->email }} </td>
+                          <td> {{ $Member->phonenumber }} </td>
                           <td> 
-                            <a href=" {{ route('crew.edit', ['id' => $crew->id]) }} ">
+                            <a href=" {{ route('member.edit', ['id' => $Member->id]) }} ">
                               <button type="submit" class="btn btn-warning">
                                 <i class="fa fa-edit"></i>
                               </button>
                             </a>
-                            <a href=" {{ route('crew.delete', ['id' => $crew->id]) }} ">
+                            <a href=" {{ route('member.delete', ['id' => $Member->id]) }} ">
                               <button type="submit" class="btn btn-danger">
                                 <i class="fa fa-remove"></i>
                               </button>
@@ -65,7 +63,7 @@
                     @empty
                         <tr>
                           <td colspan="5">
-                            Data Crew Kosong
+                            Data Member Kosong
                           </td>
                         </tr>
                     @endforelse
@@ -80,7 +78,7 @@
 
   @section('breadcumb')
     <li>
-      <a href="/crew"><i class="fa fa-user"></i> Crew</a>
+      <a href="/member"><i class="fa fa-user"></i> Member</a>
     </li>
-      <li class="active">List Crew</li>
+      <li class="active">List Member</li>
   @endsection

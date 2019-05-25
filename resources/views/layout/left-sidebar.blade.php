@@ -30,7 +30,7 @@
           <ul class="treeview-menu">
             <li>
               <a href="/crew">
-                <i class="fa fa-list-ul"></i> Data Crew
+                <i class="fa fa-list-ul"></i> List Crew
               </a>
             </li>
 
@@ -43,7 +43,7 @@
         </li>
 
         <li class="treeview">
-          <a href="#">
+          <a href="/member">
             <i class="fa fa-users"></i> <span>Member</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -52,13 +52,13 @@
 
           <ul class="treeview-menu">
             <li>
-              <a href="index.html">
-                <i class="fa fa-list-ul"></i> Data Member
+              <a href="/member">
+                <i class="fa fa-list-ul"></i> List Member
               </a>
             </li>
 
             <li>
-              <a href="index.html">
+              <a href="/member/create">
                 <i class="fa fa-user-plus"></i> Tambah Member
               </a>
             </li>
@@ -74,19 +74,19 @@
           </a>
           <ul class="treeview-menu">
             <li>
-              <a href="index.html">
-                <i class="fa fa-list"></i> Event yang Akan Datang
+              <a href="#">
+                <i class="fa fa-list"></i> List Event
               </a>
             </li>
 
             <li>
-              <a href="index.html">
+              <a href="#">
                 <i class="fa fa-plus-square"></i> Buat Event Baru
               </a>
             </li>
 
             <li>
-              <a href="index.html">
+              <a href="#">
                 <i class="fa fa-check"></i> History Event
               </a>
             </li>

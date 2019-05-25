@@ -20,11 +20,5 @@
     </section>
     <!-- /.content -->
   </div>
-  
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <!-- Control Sidebar -->
-  @include('layout.right-sidebar')
-  <!-- /.content-wrapper -->
 
 @include('layout.footer')
