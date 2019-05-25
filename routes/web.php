@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layout.app');
-})->name('root');
+Route::get('/', function () { return view('layout.app'); })->name('root');
+
+// Profile
+Route::get('/profile', 'ProfileController@index')->name('profile');
 
 // Crew
 Route::get('/crew', 'CrewController@index')->name('crew');
