@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () { return view('layout.app'); })->name('root');
+Route::get('/', 'HomeController@root')->name('root');
 
 // Profile
 Route::get('/profile', 'ProfileController@index')->name('profile');
