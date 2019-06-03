@@ -14,7 +14,6 @@ class CrewController extends Controller
      */
     public function index(Request $req)
     {
-      // dd($req->all());
         $crews = Crew::when(!empty($req->search), function($query) use ($req) {
           $query->where('name', 'LIKE', '%'. $req->search .'%');
           $query->orWhere('position', '='. $req->search);
